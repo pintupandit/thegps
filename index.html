@@ -54,6 +54,34 @@
                   <a href="#contact" class="menu-btn">Contact</a>
                </li>
             </ul>
+
+            <button id="toggle-btn" style="background-color: #090909; color: white; font-size: 16px;">👍</button>
+
+            <div class="nav__toggle" id="nav-toggle">
+               <i class='bx bx-menu'></i>
+           </div>
+
+           <!-- Timer -->
+
+           <div id="time-container">
+            <div id="date-day"></div>
+            <div id="time"></div>
+          </div>
+          
+
+          <!-- Animation to open -->
+          <!-- <div class="container">
+            <span class="tile-1"></span>
+            <span class="tile-2"></span>
+            <span class="tile-3"></span>
+            <span class="tile-4"></span>
+          </div> -->
+
+
+
+
+
+
             <div class="menu-btn">
                <i class="fas fa-bars"></i>
             </div>
@@ -128,12 +156,12 @@
                   </a>
                 </div>
               
-              <div class="cass">
+                <div class="cass">
                   <!-- <img src="https://miro.medium.com/max/1240/1*uO2AD8hqIMEY-OHQ3L3Zmw.jpeg" -->
                   <img src="gps.jpg"
                   alt="cassete" width="300" height="600" 
                     />
-                    <audio controls background-color: green>
+                    <audio controls>
                       <source src="3i.mp3" type="audio/mpeg">
                     Play.
                     </audio>
@@ -322,7 +350,7 @@
                         <!-- <div class="buttonmob">
                            <div class="button1">
                               <div class="icon">
-                                 <a href="https://twitter.com/chetannada" target="_blank">
+                                 <a href="https://twitter." target="_blank">
                                  <i class="fab fa-twitter"></i>
                               </div>
                               <span>Twitter </a>
@@ -379,8 +407,43 @@
       <div class="cursor"></div>
 
       <!--Cursor-->
+      <!-- Animation to open web page -->
+      <script>
+         window.addEventListener("load", function() {
+           var tiles = document.querySelectorAll(".container span");
+           for (var i = 0; i < tiles.length; i++) {
+             tiles[i].classList.add("loaded");
+           }
+         });
+       </script>
+       
+       <style>
+         .container span {
+           opacity: 0;
+           transition: opacity 0.7s ease;
+         }
+         .container span.loaded {
+           opacity: 1;
+         }
+       </style>
    </body>
 </html>
 
 
 
+<!-- <script>
+   window.addEventListener("load", function() {
+     document.querySelector("body").classList.add("loaded");
+   });
+ </script>
+ 
+ <style>
+   body {
+     opacity: 0;
+     transition: opacity 1s ease-in-out;
+   }
+   body.loaded {
+     opacity: 1;
+   }
+ </style> -->
+ 
