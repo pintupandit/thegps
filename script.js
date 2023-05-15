@@ -112,3 +112,45 @@ document.body.style.overflowY = "scroll";
 document.documentElement.style.height = "100vh";
 document.documentElement.style.overflowY = "scroll";
 
+
+
+
+//dark mode
+const toggleBtn = document.querySelector('#toggle-btn');
+const body = document.querySelector('body');
+
+toggleBtn.addEventListener('click', () => {
+  body.classList.toggle('dark-mode');
+});
+
+
+
+
+//timer
+// function updateTime() {
+//   var now = new Date();
+//   var hours = now.getHours();
+//   var minutes = now.getMinutes();
+//   var seconds = now.getSeconds();
+//   var timeString = hours + ':' + minutes + ':' + seconds;
+//   document.getElementById('time-container').innerHTML = timeString;
+// }
+
+// setInterval(updateTime, 1000);
+
+function updateTime() {
+  var now = new Date();
+  var hours = now.getHours();
+  var minutes = now.getMinutes();
+  var seconds = now.getSeconds();
+  var ampm = hours >= 12 ? 'PM' : 'AM';
+  hours = hours % 12;
+  hours = hours ? hours : 12;
+  var timeString = hours + ':' + minutes + ':' + seconds + ' ' + ampm;
+  document.getElementById('time-container').innerHTML = timeString;
+}
+
+setInterval(updateTime, 1000);
+
+
+//web page animation
